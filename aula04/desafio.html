@@ -3,30 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executando desafio</title>
+    <title>Desafio</title>
 </head>
 <body>
-    <h1>Sistema de Nacionalidade</h1>
-    País: <input type="text"  id="nac">
+    
+    <h1>De qual nacionalidade Anna é</h1>
+   Digite seu país: <input type="name" name="textpaís" id="textpaís">
     <input type="button" value="Verificar" onclick="verificar()">
     <div id="msg"></div>
 </body>
 <script>
         function verificar(){
-            var nac = document.querySelector("input#nac")
-            var msg = document.querySelector("div#msg")
-            var n = nac.value 
-            msg.innertHTML = `<p> O seu País é o ${n}</p>`
-            if( n == "BRASIL"){
-            msg.innertHTML += "<p> Voce é <strong>Brasileiro</strong> </p>"
-            }else { 
-            msg.innertHTML += " <p> Voce é <strong>Estrangeiro</strong> </p>"
-            }
-
-
-           }
-           
- 
-            
+        var textp = window.document.querySelector("input#textpaís")
+        var msg = window.document.querySelector("div#msg")
+        var país =`${textp.value}`
+        msg.innerHTML = `<p> O seu país é <strong>${país}</strong></p>`
+        if(país == "Brasil"){
+         msg.innerHTML +="Anna, vc é <strong>Brasileira</strong>"
+        }else{
+        msg.innerHTML +="Anna, vc é <strong>Estrageira</strong>"
+        }
+    }
 </script>
 </html>
